@@ -1,14 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/logo.svg';
+import logoLight from '../images/logo-light.svg';
 import styles from '../styles/Header.module.css';
 
-function Header() {
-  const { container, lev } = styles;
+function Header({ headerActive }) {
+  const { container, lev, active } = styles;
+  const navigate = useNavigate();
+  
+  const logoClickHandler = () => {
+    navigate('/');
+  }
 
   return (
-    <header className={ container }>
-      <img src={ logo } alt='Logo' />
+    <header className={ `${container} ${headerActive && active}` }>
+      <img src={ headerActive? logo : logoLight } alt='Logo' onClick={ logoClickHandler }/>
       <nav>
         <Link to="/driver">Motorista</Link>
         <Link to="/passenger">Passageiro</Link>
