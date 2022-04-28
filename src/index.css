@@ -2,18 +2,28 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 10px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-  overflow-x: hidden;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: var(--dark-orange);
 }
 
 ol, ul {

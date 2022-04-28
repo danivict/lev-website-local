@@ -1,0 +1,42 @@
+.container {
+  margin-top: 4rem;
+}
+
+.container hr {
+  border-top: 1px solid var(--black);
+}
+
+.questionContainer {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.questionContainer h2 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.answerContainer p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin-bottom: 3.2rem;
+  color: transparent;
+  height: fit-content;
+  max-height: 0;
+  transition: all 0.4s ease;
+}
+
+.answerContainer.active  p {
+  color: var(--gray);
+  max-height: 5rem;
+}

@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100vw;
-  padding: 280px 20vw 0 20vw;
+  padding: 180px 10vw 0 20vw;
   align-items: center;
   margin: 0 auto;
   background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
@@ -13,19 +13,27 @@
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
+  padding-right: 10vw;
 }
 
 .firstSection .secondArticle {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 60% 40%;
   align-items: center;
+  overflow-x: visible;
+}
+
+.firstSection .secondArticle img {
+  height: 80%;
+  max-width: none;
+  margin-left: -4vw;
 }
 
 .slogan {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 130%;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
@@ -36,7 +44,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 6.4rem;
   line-height: 74px;
   text-align: start;
   margin-bottom: 32px;
@@ -47,7 +55,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 130%;
   letter-spacing: 0.05em;
   color: var(--white);
@@ -63,6 +71,216 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 150%;
+}
+
+.tip {
+  padding-right: 10vw;
+  margin: 0 auto;
+}
+
+.secondSection {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.secondSectionSlide {
+  display: grid;
+  padding: 0 17.5vw;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  width: 100vw;
+}
+
+.secondSectionSlide h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 55px;
+  text-decoration: underline;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.secondSectionSlide p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05rem;
+  color: var(--gray);
+}
+
+.thirdSection {
+  position: relative;
+}
+
+.thirdSectionBackground {
+  height: fit-content;
+  background-image: url('../images/home/section3.png');
+  height: 70vh;
+  max-height: 700px;
+  
+}
+
+.thirdSectionUpperCover {
+  background: linear-gradient(180deg, #ff8f29d9 0%, #e46d00d9 100%);
+  mix-blend-mode: normal;
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  max-height: 700px;
+  z-index: 2;
+}
+
+.thirdSectionLowerCover {
+  background: linear-gradient(180deg, var(--orange) 0%, var(--dark-orange) 100%);
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  max-height: 700px;
+  z-index: 1;
+}
+
+.thirdSection article {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdSection article h1{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 55px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+.thirdSection article p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 48px;
+  color: var(--white);
+}
+
+.thirdSection article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.thirdSection article div button {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 30px;
+  color:  var(--white);
+  padding: 12px 32px;
+}
+
+.fourthSection div {
+  position: relative;
+  background-image: url('../images/home/section4.png');
+  width: 100vw;
+  height: 70vh;
+  max-height: 700px;
+}
+
+.fourthSection div canvas {
+  background: var(--black);
+  opacity: 0.42;
+  width: 100vw;
+  height: 70vh;
+  max-height: 700px;
+}
+
+.fourthSectionCard {
+  position: absolute;
+  top: 50%;
+  left: 20vw;
+  transform: translate(0, -50%);
+  background: var(--white);
+  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  width: 35em;
+  padding: 6em 3em;
+  height: 45em;
+  z-index: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.fourthSectionCard h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+}
+
+.fourthSectionCard p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.fourthSectionCard button {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--gray);
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  border-radius: 30px;
+  padding: 6px 32px;
+}
+
+.fifthSection {
+  width: 100vw;
+  padding: 0 20vw;
+}
+
+.fifthSection div h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 55px;
+  display: flex;
+  align-items: center;
+  margin-top: 4vh;
+  color: var(--orange);
 }
