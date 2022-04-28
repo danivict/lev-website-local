@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import styles from '../../styles/Home.module.css';
 import phone from '../../images/home/single-phone.svg';
 import phones from '../../images/home/dual-phones.svg';
+import Footer from '../../components/Footer';
 
 
 function Home() {
@@ -49,6 +50,7 @@ function Home() {
           </article>
         </section>
       </main>
+      <Footer/>
     </>
   );
 }
