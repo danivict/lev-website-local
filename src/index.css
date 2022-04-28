@@ -16,6 +16,16 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: var(--dark-orange);
+}
+
 ol, ul {
   list-style: none;
 }
