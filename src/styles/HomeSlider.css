@@ -1,0 +1,83 @@
+.slider {
+  display: flex;
+}
+
+.slide {
+  /* display: grid; */
+  /* grid-template-columns: 40% 60%; */
+  padding: 0 17.5vw;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  transition: all 0.5s ease;
+}
+
+.slide img {
+  max-height: 500px;
+}
+
+.slide article {
+  max-width: 590px;
+  margin-top: -5vh;
+}
+
+.slide h1 {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  text-decoration: underline;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.slide p {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.secondSlide article {
+  margin-top: -13vh;
+  margin-left: -7vw;
+}
+
+
+.chevron {
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.previous {
+  left: 15vw;
+}
+
+.previous:active {
+  transform: scale(0.7);
+}
+
+.next {
+  transform: rotate(180deg);
+  left: 85vw;
+}
+
+.next:active {
+  transform: rotate(180deg) scale(0.8);
+}
+
+.slider.first .firstSlide {
+  margin-left: 200vw;
+}
+
+.slider.second .firstSlide {
+  margin-left: 0vw;
+}
+
+.slider.third .firstSlide {
+  margin-left: -200vw;
+}
