@@ -9,6 +9,7 @@
   width: 100vw;
   transition: all 0.5s ease;
   background-color: transparent;
+  z-index: 1000;
 }
 
 .container.active {
@@ -30,7 +31,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 150%;
   color: var(--white);
   text-decoration: none;
@@ -38,7 +39,7 @@
 }
 
 .container.active a {
-  color: var(--gray);
+  color: var(--blue);
 }
 
 .lev {
@@ -48,5 +49,5 @@
 }
 
 .container.active .lev {
-  border: 2px solid var(--gray);;
+  border: 2px solid var(--blue);;
 }
