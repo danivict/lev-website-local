@@ -6,7 +6,8 @@ function Faq({ question, answer }) {
     container,
     questionContainer,
     answerContainer,
-    active
+    active,
+    chevron
   } = styles;
 
   const [answerActive, setAnswerActive] = useState(false);
@@ -17,8 +18,8 @@ function Faq({ question, answer }) {
         className={ questionContainer }
         onClick={ () => setAnswerActive((prev) => !prev) }
       >
-        <h2>{question}</h2>
-        <span>icon</span>
+        <h3>{question}</h3>
+        <i className={`bi ${chevron} bi-chevron-down ${answerActive ? active : ''}`}></i>
       </div>
       <hr />
       <div className={ `${answerContainer} ${answerActive ? active : ''}` }>

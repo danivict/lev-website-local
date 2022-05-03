@@ -35,9 +35,9 @@ function Footer() {
             <div></div>
             <div>
                 <p className={ footerSectionTitle }>Acompanhe a Lev nas redes sociaisAcompanhe a Lev nas redes sociais</p>
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-facebook"></i>
+                <i className="bi bi-instagram"></i>
+                <i className="bi bi-linkedin"></i>
             </div>
         </footer>
     );

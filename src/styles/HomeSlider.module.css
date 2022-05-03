@@ -51,6 +51,8 @@
 .chevron {
   position: absolute;
   transition: all 0.2s ease;
+  font-size: 5rem;
+  color: var(--orange);
 }
 
 .previous {
@@ -58,12 +60,12 @@
 }
 
 .previous:active {
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 .next {
-  transform: rotate(180deg);
   left: 85vw;
+  transform: rotate(180deg);
 }
 
 .next:active {

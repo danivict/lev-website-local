@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './pages/Home';
+import Help from './pages/Help';
 
 function App() {
   const [headerActive, setHeaderActive] = useState(false);
@@ -25,7 +26,8 @@ function App() {
     <>
       <Header headerActive={ headerActive } />
       <Routes>
-        <Route path='/' element={ <Home /> }/>
+        <Route path='/' element={ <Home /> } />
+        <Route path='/help' element={ <Help /> } />
       </Routes>
       <Footer />
     </>
