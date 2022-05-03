@@ -1,0 +1,55 @@
+.container .mainContent{
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 0 20vw;
+  background-image: url(../images/topAreaBg.svg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 39vw 33vw;
+  align-items: flex-end;
+}
+
+.container article {
+  align-self: center;
+}
+
+.container article h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.container article h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.4rem;
+  color: var(--white);
+}
+
+.container article p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.container article button {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  margin-top: 3rem;
+  padding: .8rem 3rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container article button:active {
+  transform: scale(0.97);
+}

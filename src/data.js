@@ -22,4 +22,22 @@ const faq = [
 
 ]
 
+/* 
+  faq = {
+    driver: [
+      {
+        question: '',
+        answer: '',
+        date: '',
+      }
+    ],
+    user: [
+      {
+        question: '',
+        answer: '',
+        date: '',
+      }
+    ],
+  }
+*/
 export default faq;

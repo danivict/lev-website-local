@@ -1,7 +1,7 @@
 .searchArea {
   width: 100vw;
   height: 100vh;
-  background-image: url(../images/help/searchAreaBg.svg);
+  background-image: url(../images/topAreaBg.svg);
   background-size: cover;
   display: flex;
   flex-flow: column nowrap;

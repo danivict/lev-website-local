@@ -19,29 +19,29 @@ function Help() {
         <h1>Como podemos te ajudar?</h1>
         <p>Se não encontrar o precisa aqui, melhor pesquisar!</p>
         <label htmlFor='search'>
-          <i class={`bi bi-search ${magnifierIcon}`}></i>
+          <i className={`bi bi-search ${magnifierIcon}`}></i>
           <input type='text' id='search' placeholder='Qual a sua dúvida?' />
-          <i class={`bi bi-arrow-right ${arrowIcon}`}></i>
+          <i className={`bi bi-arrow-right ${arrowIcon}`}></i>
         </label>
       </section>
       <section className={answersArea}>
         <h1>Perguntas Frequêntes</h1>
         <section>
           <h2>Geral.</h2>
-          {faq.map(({ question, answer }) => (
-            <Faq question={question} answer={answer} />
+          {faq.map(({ question, answer }, key) => (
+            <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
         <section>
           <h2>Motorista.</h2>
-          {faq.map(({ question, answer }) => (
-            <Faq question={question} answer={answer} />
+          {faq.map(({ question, answer }, key) => (
+            <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
         <section>
           <h2>Usuário.</h2>
-          {faq.map(({ question, answer }) => (
-            <Faq question={question} answer={answer} />
+          {faq.map(({ question, answer }, key) => (
+            <Faq key={key} question={question} answer={answer} />
           ))}
         </section>
       </section>
