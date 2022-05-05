@@ -1,13 +1,13 @@
 .searchArea {
   width: 100vw;
   height: 100vh;
-  background-image: url(../images/topAreaBg.svg);
+  background-image: url(../images/blueBg.svg);
   background-size: cover;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding: 0 20vw;
+  padding: 0 15vw;
   padding-top: 12.5vh;
 }
 
@@ -61,7 +61,6 @@
   border-radius: 50px;
   margin: auto;
   width: 100%;
-  outline: none;
   font-size: 1.8rem;
   font-weight: 700;
   padding: 24px 13% 24px 12%;
@@ -69,7 +68,7 @@
 
 .answersArea {
   width: 100vw;
-  padding: 0 20vw;
+  padding: 0 15vw;
 }
 
 .answersArea h1 {

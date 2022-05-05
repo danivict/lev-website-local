@@ -3,7 +3,7 @@ import phone from '../../images/home/single-phone.svg';
 import phones from '../../images/home/dual-phones.svg';
 import pontinha from '../../images/home/pontinha.svg';
 import HomeSlider from '../../components/HomeSlider';
-import faq from '../../data';
+import faq from '../../data/faq';
 import Faq from '../../components/Faq';
 
 function Home() {

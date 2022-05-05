@@ -3,7 +3,7 @@ footer {
     background-color: black;
     color: white;
     height: 50rem;
-    padding: 8rem 20vw 4rem 20vw;
+    padding: 8rem 15vw 4rem 15vw;
 
     display: grid;
     grid-template-rows: 60% 40%;

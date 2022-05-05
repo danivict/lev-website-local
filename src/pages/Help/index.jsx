@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../../styles/Help.module.css';
-import faq from '../../data';
+import faq from '../../data/faq';
 import Faq from '../../components/Faq';
 
 function Help() {

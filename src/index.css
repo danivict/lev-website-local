@@ -17,6 +17,15 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: var(--gray) solid 2px;
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -45,5 +54,7 @@ img {
   --dark-orange: #E46D00;
   --gray:#2D2D2D ;
   --black: black;
+  --drop-shadow: rgba(0, 0, 0, 0.1);
   --white: white;
+  --beige: #f9f5f2;
 }

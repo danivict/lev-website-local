@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100vw;
-  padding: 180px 10vw 0 20vw;
+  padding: 180px 10vw 0 15vw;
   align-items: center;
   margin: 0 auto;
   background: linear-gradient(180deg, #2dc6ea 0%, #2ba9c8 100%);
@@ -220,7 +220,7 @@
 .fourthSectionCard {
   position: absolute;
   top: 50%;
-  left: 20vw;
+  left: 15vw;
   transform: translate(0, -50%);
   background: var(--white);
   box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.2);
@@ -270,7 +270,7 @@
 
 .fifthSection {
   width: 100vw;
-  padding: 0 20vw;
+  padding: 0 15vw;
 }
 
 .fifthSection div h1 {
