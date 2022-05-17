@@ -150,6 +150,22 @@
   resize: none;
 }
 
+.questionFormArea form select {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid var(--gray);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  background-color: var(--white);
+  appearance: none;
+}
+
 .questionFormArea form button {
   width: 50%;
   border-radius: 5rem;
