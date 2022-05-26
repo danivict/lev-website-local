@@ -16,6 +16,7 @@ function Header({ headerActive }) {
     <header className={ `${container} ${headerActive && active}` }>
       <img src={ headerActive? logo : logoLight } alt='Logo' onClick={ logoClickHandler }/>
       <nav>
+        <Link to="/who">Quem somos</Link>
         <Link to="/driver">Motorista</Link>
         <Link to="/passenger">Passageiro</Link>
         <Link to="/security">Segurança</Link>
