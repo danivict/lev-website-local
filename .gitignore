@@ -1,6 +1,4 @@
 node_modules
-<<<<<<< HEAD
 package-lock.json
-=======
-package-lock.json
->>>>>>> 35eef4d3d7c6eb681b097db8db3214f7a82af5a1
+*.scss
+*.css.map
