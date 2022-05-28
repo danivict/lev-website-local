@@ -1,16 +1,29 @@
-.container .mainContent{
+.container .mainContent {
   width: 100vw;
   height: 100vh;
   padding: 0 0 0 15vw;
   background-image: url(../images/blueBg.svg);
   background-size: cover;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 39vw 33vw;
-  align-items: flex-end;
+  -ms-grid-columns: 39vw 33vw;
+      grid-template-columns: 39vw 33vw;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .container .mainContent article {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .mainContent article h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.4rem;
+  color: var(--white);
 }
 
 .container .mainContent article h2 {
@@ -18,13 +31,6 @@
   font-size: 2.4rem;
   line-height: 130%;
   letter-spacing: 0.05em;
-  color: var(--white);
-}
-
-.container .mainContent article h1 {
-  font-weight: 700;
-  font-size: 6.4rem;
-  line-height: 7.4rem;
   color: var(--white);
 }
 
@@ -41,24 +47,35 @@
   font-size: 1.8rem;
   line-height: 150%;
   margin-top: 3rem;
-  padding: .8rem 3rem;
+  padding: 0.8rem 3rem;
   border: none;
   border-radius: 3rem;
   background-color: var(--white);
   color: var(--orange);
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .container .mainContent article button:active {
-  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
 .benefitsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20vh;
   margin-bottom: 10vh;
 }
@@ -74,9 +91,16 @@
 .cardsContainer {
   width: 100vw;
   padding: 0 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2rem;
   margin-bottom: 20vh;
 }
@@ -89,14 +113,15 @@
 }
 
 .letterSection::before {
-  content:"";
-  position:absolute;
-  z-index:-1;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+          clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
   background-image: url(../images/driver/frame.svg);
   background-size: cover;
 }
@@ -131,7 +156,8 @@
 
 .letterSection img {
   position: absolute;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   top: 100%;
   left: 50%;
   z-index: 5;
@@ -141,16 +167,27 @@
   background-image: url(../images/blueBg.svg);
   background-size: cover;
   width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-top: -20vh;
   padding: 40vh 30vw 10vh;
 }
 
 .calculatorSection .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5rem;
 }
 
@@ -175,16 +212,24 @@
 .signinSection {
   width: 100vw;
   padding: 15vh 15vw;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 50% 50%;
-  background: linear-gradient(180deg, #FF8F29 0%, #E46D00 100%);
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f29), to(#e46d00));
+  background: linear-gradient(180deg, #ff8f29 0%, #e46d00 100%);
   gap: 2rem;
   margin-top: -1px;
 }
 
 .signinSection article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 .signinSection article h1 {
@@ -204,10 +249,19 @@
 }
 
 .signinSection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }
 
@@ -230,3 +284,4 @@
   font-size: 2.4rem;
   line-height: 2.8rem;
 }
+/*# sourceMappingURL=Driver.module.css.map */

@@ -25,7 +25,7 @@ function Home() {
     fourthSectionCard,
     fifthSection,
   } = styles;
-
+  
   return (
     <main className={container}>
       <section className={firstSection}>
