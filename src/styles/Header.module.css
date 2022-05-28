@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15vw;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.container.active {
+  background-color: var(--white);
+}
+
+
+.container img {
+  cursor: pointer;
+}
+
+.container nav {
+  display: flex;
+  gap: 20px;
+  align-content: center;
+}
+
+.container a {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--white);
+  text-decoration: none;
+  margin: auto;
+}
+
+.container.active a {
+  color: var(--blue);
+}
+
+.lev {
+  border: 2px solid var(--white);
+  border-radius: 30px;
+  padding: 8px 32px;
+}
+
+.container.active .lev {
+  border: 2px solid var(--blue);;
+}

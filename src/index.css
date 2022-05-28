@@ -2,10 +2,12 @@
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 10px;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
+  font-family: Ubuntu;
   box-sizing: inherit;
 }
 
@@ -13,6 +15,25 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: var(--gray) solid 2px;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: var(--dark-orange);
 }
 
 ol, ul {
@@ -33,5 +54,13 @@ img {
   --dark-orange: #E46D00;
   --gray:#2D2D2D ;
   --black: black;
+  --drop-shadow: rgba(0, 0, 0, 0.1);
   --white: white;
+  --beige: #f9f5f2;
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 8px;
+  }
 }

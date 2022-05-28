@@ -1,0 +1,232 @@
+.container .mainContent{
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 0 15vw;
+  background-image: url(../images/blueBg.svg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 39vw 33vw;
+  align-items: flex-end;
+}
+
+.container .mainContent article {
+  align-self: center;
+}
+
+.container .mainContent article h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.container .mainContent article h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.4rem;
+  color: var(--white);
+}
+
+.container .mainContent article p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.container .mainContent article button {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+  margin-top: 3rem;
+  padding: .8rem 3rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .mainContent article button:active {
+  transform: scale(0.97);
+}
+
+.benefitsTitle {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.benefitsTitle h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  text-align: center;
+  color: var(--orange);
+}
+
+.cardsContainer {
+  width: 100vw;
+  padding: 0 15vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20vh;
+}
+
+.letterSection {
+  position: relative;
+  width: 100%;
+  padding: 20vh 45vw 30vh 15vw;
+  z-index: 0;
+}
+
+.letterSection::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+  background-image: url(../images/driver/frame.svg);
+  background-size: cover;
+}
+
+.letterSection h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 7.4rem;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.letterSection p {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.letterSection button {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: var(--white);
+  padding: 1rem 4rem;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 3rem;
+}
+
+.letterSection img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+}
+
+.calculatorSection {
+  background-image: url(../images/blueBg.svg);
+  background-size: cover;
+  width: 100vw;
+  height: fit-content;
+  margin-top: -20vh;
+  padding: 40vh 30vw 10vh;
+}
+
+.calculatorSection .head {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.calculatorSection .head h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.calculatorSection .head p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--white);
+}
+
+.signinSection {
+  width: 100vw;
+  padding: 15vh 15vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: linear-gradient(180deg, #FF8F29 0%, #E46D00 100%);
+  gap: 2rem;
+  margin-top: -1px;
+}
+
+.signinSection article {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.signinSection article h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.signinSection article p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.signinSection form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signinSection form input {
+  width: 100%;
+  padding: 2rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: var(--gray);
+}
+
+.signinSection form button {
+  margin-top: 1rem;
+  padding: 1.5rem 6rem;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 4rem;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
