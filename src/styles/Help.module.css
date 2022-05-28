@@ -3,10 +3,19 @@
   height: 100vh;
   background-image: url(../images/blueBg.svg);
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 15vw;
   padding-top: 12.5vh;
 }
@@ -15,8 +24,12 @@
   font-weight: 700;
   font-size: 6.4rem;
   line-height: 7.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: var(--white);
 }
@@ -25,16 +38,24 @@
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: var(--white);
   margin-bottom: 2.5vh;
 }
 
 .searchArea label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 80%;
   position: relative;
 }
@@ -44,16 +65,8 @@
   top: 50%;
   font-size: 3rem;
   color: var(--orange);
-  transform: translate(0, -50%);
-}
-
-.magnifierIcon {
-  left: 5%;
-}
-
-.arrowIcon {
-  left: 90%;
-  cursor: pointer;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .searchArea input {
@@ -66,6 +79,15 @@
   padding: 24px 13% 24px 12%;
 }
 
+.magnifierIcon {
+  left: 5%;
+}
+
+.arrowIcon {
+  left: 90%;
+  cursor: pointer;
+}
+
 .answersArea {
   width: 100vw;
   padding: 0 15vw;
@@ -75,8 +97,12 @@
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   color: var(--orange);
   margin: 10vh 0 5vh;
@@ -86,8 +112,12 @@
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--orange);
 }
 
@@ -102,23 +132,38 @@
 }
 
 .questionFormArea h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 5.5rem;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: var(--orange);
   margin-bottom: 5rem;
 }
 
 .questionFormArea form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .questionFormArea form input {
@@ -128,9 +173,13 @@
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--gray);
   margin-bottom: 2rem;
 }
@@ -142,9 +191,13 @@
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--gray);
   margin-bottom: 2rem;
   resize: none;
@@ -178,3 +231,4 @@
   line-height: 150%;
   cursor: pointer;
 }
+/*# sourceMappingURL=Help.module.css.map */
