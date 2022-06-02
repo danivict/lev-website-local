@@ -6,13 +6,34 @@ html {
   overflow-x: hidden;
 }
 
-*, *:before, *:after {
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 8px;
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
   font-family: Ubuntu;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -37,7 +58,8 @@ a:hover {
   color: var(--dark-orange);
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -48,11 +70,11 @@ img {
 
 /* Paleta de cores */
 :root {
-  --blue: #2DC6EA;
-  --dark-blue: #02A0C6;
-  --orange: #FF8F29;
-  --dark-orange: #E46D00;
-  --gray:#2D2D2D ;
+  --blue: #2dc6ea;
+  --dark-blue: #02a0c6;
+  --orange: #ff8f29;
+  --dark-orange: #e46d00;
+  --gray: #2d2d2d;
   --black: black;
   --drop-shadow: rgba(0, 0, 0, 0.1);
   --white: white;

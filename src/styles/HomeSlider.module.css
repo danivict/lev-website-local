@@ -8,11 +8,11 @@
   margin-left: 200vw;
 }
 
-.slider.second .secondSlide {
+.slider.second .firstSlide {
   margin-left: 0vw;
 }
 
-.slider.third .thirdSlide {
+.slider.third .firstSlide {
   margin-left: -200vw;
 }
 
