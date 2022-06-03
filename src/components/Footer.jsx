@@ -1,16 +1,15 @@
 import React from 'react';
 import styles from '../styles/Footer.module.css';
 import logoFooter from '../images/logo-footer.svg';
-import appstoreImg from '../images/appstore.svg'
-import googleplayImg from '../images/googleplay.svg'
-
+import appstoreImg from '../images/appstore.svg';
+import googleplayImg from '../images/googleplay.svg';
 
 function Footer() {
-    const {footerSectionTitle, storeSection, lev} = styles;
+    const {footerSectionTitle, storeSection, lev, footerLogo} = styles;
 
     return(
         <footer>
-            <img src={ logoFooter } alt="Lev footer" />
+            <img src={ logoFooter } className={footerLogo} alt="Lev footer" />
             <div>
                 <p className={ footerSectionTitle }>Contatos</p>
                 <p>Ajuda</p>
@@ -34,7 +33,7 @@ function Footer() {
             <div></div>
             <div></div>
             <div>
-                <p className={ footerSectionTitle }>Acompanhe a Lev nas redes sociaisAcompanhe a Lev nas redes sociais</p>
+                <p className={ footerSectionTitle }>Acompanhe a Lev nas redes sociais</p>
                 <i className="bi bi-facebook"></i>
                 <i className="bi bi-instagram"></i>
                 <i className="bi bi-linkedin"></i>

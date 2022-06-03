@@ -18,6 +18,7 @@
   transition: all 0.5s ease;
   background-color: transparent;
   z-index: 1000;
+  overflow: visible;
 }
 
 .container.active {
@@ -30,6 +31,17 @@
 
 .container.active a {
   color: var(--blue);
+}
+
+.container canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: var(--black);
+  opacity: 0.7;
 }
 
 .container img {
@@ -60,5 +72,30 @@
   border: 2px solid var(--white);
   border-radius: 30px;
   padding: 8px 32px;
+}
+
+.menu {
+  font-size: 48px;
+  color: var(--white);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.menu:hover {
+  font-size: 52px;
+}
+
+.menu:active {
+  font-size: 48px;
+}
+
+.menu.active {
+  color: var(--blue);
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    padding: 0 5vw;
+  }
 }
 /*# sourceMappingURL=Header.module.css.map */
