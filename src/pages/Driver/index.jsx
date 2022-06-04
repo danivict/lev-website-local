@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Driver.module.css';
 import person from '../../images/driver/person.png';
+import personMobile from '../../images/driver/personMobile.png';
 import logoMinimal from '../../images/logo-minimal.svg';
 import levButton from '../../images/driver/levButton.svg';
 import BenefitsCard from '../../components/BenefitsCard';
+import pontinha from '../../images/home/pontinha.svg';
 import { benefits } from '../../data/benefits';
 import Calculator from '../../components/Calculator';
 
@@ -11,13 +13,33 @@ function Driver() {
   const {
     container,
     mainContent,
+    personS,
+    tip,
     benefitsTitle,
     cardsContainer,
     letterSection,
     calculatorSection,
     signinSection,
-    head
+    head,
   } = styles;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    checkIsMobile();
+    window.addEventListener('resize', () => {
+      checkIsMobile();
+    });
+  }, []);
+
+  const checkIsMobile = () => {
+    if (window.innerWidth <= 1024) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
   return (
     <main className={container}>
       <section className={mainContent}>
@@ -29,7 +51,12 @@ function Driver() {
           <p>Mais rápido. Mais barato. Pega Lev</p>
           <button>Quero ser motorista</button>
         </article>
-        <img src={person} alt='' />
+        <img
+          className={personS}
+          src={isMobile ? personMobile : person}
+          alt='Motorista segurando chave de carro'
+        />
+        <img className={tip} src={pontinha} alt='Logo' />
       </section>
       <section>
         <div className={benefitsTitle}>
@@ -58,7 +85,7 @@ function Driver() {
         <img src={levButton} alt='Lev' />
       </section>
       <section className={calculatorSection}>
-        <article className={ head }>
+        <article className={head}>
           <h1>Calculadora de lucros.</h1>
           <p>
             Veja o quanto você vai receber a mais! Fique a vontade para editar
@@ -76,16 +103,20 @@ function Driver() {
           <h1>Não deixa para depois!</h1>
           <p>
             Faça agora mesmo sua inscrição para se tornar um Motorista Lev,
-            aproveite os melhores benefícios do Mercado.<br/><br/>Os primeiros 1000
-            motoristas cadastrados irão ganhar bonificações nas primeiras
-            corridas.
+            aproveite os melhores benefícios do Mercado.
+            <br />
+            <br />
+            Os primeiros 1000 motoristas cadastrados irão ganhar bonificações
+            nas primeiras corridas.
           </p>
         </article>
         <form>
-          <input type="text" placeholder='Nome:'/>
-          <input type="email" placeholder='Email:'/>
-          <input type="tel " placeholder='Telefone:'/>
-          <button type='submit' onClick={ (e) => e.preventDefault() }>Quero ser motorista Lev!</button>
+          <input type='text' placeholder='Nome:' />
+          <input type='email' placeholder='Email:' />
+          <input type='tel ' placeholder='Telefone:' />
+          <button type='submit' onClick={(e) => e.preventDefault()}>
+            Quero ser motorista Lev!
+          </button>
         </form>
       </section>
     </main>
