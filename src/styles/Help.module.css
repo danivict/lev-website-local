@@ -16,8 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 15vw;
-  padding-top: 12.5vh;
+  padding: 12.5vh 15vw 0 15vw;
 }
 
 .searchArea h1 {
@@ -214,5 +213,39 @@
   font-size: 1.8rem;
   line-height: 150%;
   cursor: pointer;
+}
+
+.questionFormArea form select {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  padding: 20px;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchArea {
+    padding: 12.5vh 5vw 0 5vw;
+  }
+  .searchArea h1 {
+    font-size: 5.4rem;
+  }
+  .searchArea label {
+    width: 100%;
+  }
+  .searchArea label input {
+    padding: 16px 16% 16px 16%;
+  }
+  .answersArea {
+    padding: 0 5vw;
+  }
+  .questionFormArea {
+    padding: 0 5vw;
+  }
 }
 /*# sourceMappingURL=Help.module.css.map */

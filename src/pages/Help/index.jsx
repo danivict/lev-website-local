@@ -46,8 +46,7 @@ function Help() {
   const questionHandler = (e) => {
     const db = new Database();
     const { name, email, question, type } = questionForm;
-    db.ask(name, email, question, type);
-    return false;
+    name && email && question && type && db.ask(name, email, question, type);
   };
 
   const questionInputChangeHandler = ({ target }) => {
