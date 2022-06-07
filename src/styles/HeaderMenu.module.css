@@ -14,8 +14,8 @@
   margin-right: -5vw;
   font-size: 12px;
   background-color: var(--gray);
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .container.inactive {

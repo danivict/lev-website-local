@@ -62,7 +62,9 @@ function Home() {
       </section>
       <section className={thirdSection}>
         <article>
-          <h1>Conheça todos os nossos benefícios!</h1>
+          <section>
+            <h1>Conheça todos os <span>nossos benefícios!</span></h1>
+          </section>
           <p>
             Cashback para motoristas e usuários, prêmios, suporte físico para
             atendê-los e muuito mais, venha saber tudo!

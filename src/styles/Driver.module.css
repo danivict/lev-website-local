@@ -21,8 +21,8 @@
 
 .container .mainContent article h1 {
   font-weight: 700;
-  font-size: 6.4rem;
-  line-height: 7.4rem;
+  font-size: 4rem;
+  line-height: 5rem;
   color: var(--white);
 }
 
@@ -31,7 +31,13 @@
   font-size: 2.4rem;
   line-height: 130%;
   letter-spacing: 0.05em;
-  color: var(--white);
+  color: var(--blue);
+  background-color: var(--white);
+  border-radius: 2rem;
+  padding: 0 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .container .mainContent article p {
@@ -50,8 +56,9 @@
   padding: 0.8rem 3rem;
   border: none;
   border-radius: 3rem;
-  background-color: var(--white);
-  color: var(--orange);
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -283,5 +290,66 @@
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container .mainContent {
+    position: relative;
+    -ms-grid-columns: 100vw;
+        grid-template-columns: 100vw;
+    -ms-grid-rows: 60% 40%;
+        grid-template-rows: 60% 40%;
+    padding: 20vw 5vw 0 5vw;
+    padding-bottom: 20vh;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: 90vw;
+  }
+  .container .mainContent article {
+    width: 90vw;
+  }
+  .container .mainContent .personS {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    margin-bottom: -8vh;
+    width: 90%;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .container .mainContent .tip {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .letterSection {
+    padding: 20vh 5vw 30vh 5vw;
+  }
+  .letterSection::before {
+    -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+            clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  }
+  .letterSection h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .calculatorSection {
+    padding: 40vh 5vw 10vh;
+  }
+  .calculatorSection .head h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .calculatorSection .head p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .signinSection {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 60% 40%;
+        grid-template-rows: 60% 40%;
+  }
 }
 /*# sourceMappingURL=Driver.module.css.map */

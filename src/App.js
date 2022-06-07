@@ -18,7 +18,7 @@ function App() {
   } , []);
 
   const showHeader = () => {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       setHeaderActive(true);
     } else {
       setHeaderActive(false);

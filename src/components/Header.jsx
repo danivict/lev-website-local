@@ -10,7 +10,7 @@ function Header({ headerActive }) {
   const { container, lev, active, menu } = styles;
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const logoClickHandler = () => {
     navigate('/');
@@ -21,7 +21,7 @@ function Header({ headerActive }) {
     window.addEventListener('resize', () => {
       checkIsMobile();
     });
-  });
+  }, []);
 
   const checkIsMobile = () => {
     if (window.innerWidth <= 764) {
@@ -43,7 +43,6 @@ function Header({ headerActive }) {
         alt='Logo'
         onClick={logoClickHandler}
       />
-      {/* <HeaderMenu open setIsMenuOpen={ setIsMenuOpen } lev={ lev } /> */}
       {isMobile ? (
         <>
           <HeaderMenu
