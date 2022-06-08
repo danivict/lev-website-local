@@ -8,6 +8,8 @@
   display: grid;
   -ms-grid-columns: 39vw 33vw;
       grid-template-columns: 39vw 33vw;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -67,6 +69,14 @@
 .container .mainContent article button:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
+}
+
+.tip {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .benefitsTitle {
@@ -129,7 +139,7 @@
   bottom: 0;
   -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
           clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-  background-image: url(../images/driver/frame.svg);
+  background-image: url(../images/driver/frame.png);
   background-size: cover;
 }
 
@@ -177,7 +187,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-top: -20vh;
+  margin-top: -25vh;
   padding: 40vh 30vw 10vh;
 }
 
@@ -316,7 +326,7 @@
     -ms-grid-column-align: start;
         justify-self: start;
   }
-  .container .mainContent .tip {
+  .tip {
     position: absolute;
     top: 97%;
     left: 50%;

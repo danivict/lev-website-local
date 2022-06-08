@@ -64,12 +64,12 @@ function Driver() {
           <h1>Vantagens de ser Lev.</h1>
         </div>
         <div className={cardsContainer}>
-          {benefits.driver.map((item, key) => (
+          {benefits.driver.map(({ icon, title, text }) => (
             <BenefitsCard
-              key={key}
-              img={item.icon}
-              title={item.title}
-              text={item.text}
+              key={title}
+              img={icon}
+              title={title}
+              text={text}
             />
           ))}
         </div>

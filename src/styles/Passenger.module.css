@@ -1,23 +1,19 @@
-.sectionMain,
-.sectionCards {
+.sectionMain {
   height: 110vh;
   padding: 0 15vw;
 }
 
-.sectionMain h1,
-.sectionCards h1 {
+.sectionMain h1 {
   font-size: 6.4rem;
   font-weight: 700;
 }
 
-.sectionMain h2,
-.sectionCards h2 {
+.sectionMain h2 {
   font-size: 4.8rem;
   font-weight: 700;
 }
 
-.sectionMain p,
-.sectionCards p {
+.sectionMain p {
   font-size: 2.4rem;
 }
 
@@ -57,21 +53,19 @@
 }
 
 .sectionCards {
-  height: 116vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0 15vw;
+  gap: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin-bottom: 10vh;
 }
 
 .secCardsTitle {
@@ -85,7 +79,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10rem;
+  margin: 10rem;
 }
 
 .secCardsTitle img {
@@ -94,69 +88,9 @@
 }
 
 .secCardsTitle h2 {
+  font-size: 4rem;
+  font-weight: 700;
   color: var(--orange);
-}
-
-.cards > div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  row-gap: 10rem;
-  -webkit-column-gap: 5rem;
-          column-gap: 5rem;
-}
-
-.cards > div input {
-  display: none;
-}
-
-.cardHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cardText {
-  border-left: 5px solid var(--orange);
-  padding: 0 0 0 1rem;
-}
-
-.card {
-  background-color: #f9f5f2;
-  border-radius: 2rem;
-  padding: 2rem;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  cursor: default;
-}
-
-.card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.card img {
-  width: 8.1rem;
-  margin-bottom: 2rem;
-  margin-right: 2rem;
-}
-
-.card h4 {
-  color: var(--orange);
-  font-size: 2.4rem;
-  margin-bottom: 2rem;
-}
-
-.card p {
-  font-size: 1.8rem;
 }
 
 @media (max-width: 785px) {

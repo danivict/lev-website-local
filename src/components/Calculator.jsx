@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import logo from "../images/driver/calculator/logo.svg";
-import modalIconInfo from "../images/driver/calculator/info.svg";
-import modalIconClose from "../images/driver/calculator/close.svg";
-import styles from "../styles/Calculator.module.css";
-import Modal from "react-modal";
+import React, { useState } from 'react';
+import logo from '../images/driver/calculator/logo.svg';
+import modalIconInfo from '../images/driver/calculator/info.svg';
+import modalIconClose from '../images/driver/calculator/close.svg';
+import styles from '../styles/Calculator.module.css';
+import Modal from 'react-modal';
+import { disableScroll, enableScroll } from '../helpers/scrollHelper';
 
-Modal.setAppElement("#root");
+Modal.setAppElement('#root');
 
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(0, 0, 0, 0.6)';
 
@@ -65,12 +66,26 @@ function Calculator() {
     btnCalculate,
   } = styles;
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [calculatorForm, setCalculatorForm] = useState({
+    daysWorked: NaN,
+    dailyRuns: NaN,
+    dailyExpenses: NaN,
+    avarageIncome: NaN,
+  });
 
-  function toggleModal() {
-    setIsOpen(!isOpen);
-  }
-  
+  const toggleModal = () => {
+    !isModalOpen ? disableScroll() : enableScroll();
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const formOnChangeHandler = ({ target: { id, value } }) => {
+    setCalculatorForm((prev) => ({
+      ...prev,
+      [id]: +value,
+    }));
+  };
+
   return (
     <div className={calculatorsWrapper}>
       <div className={calculators}>
@@ -124,34 +139,58 @@ function Calculator() {
           <div className={parameters}>
             <div className={calculatorHeader}>
               <div className={image}>
-                <img src={logo} alt="" />
+                <img src={logo} alt='' />
                 <h4>Lev</h4>
               </div>
               <div onClick={toggleModal} className={`${info} ${openModal}`}>
-                <img src={modalIconInfo} className={infoIcon} alt="info" />
+                <img src={modalIconInfo} className={infoIcon} alt='info' />
               </div>
             </div>
 
             <div className={inputAreas}>
               <div className={inputArea}>
-                <label for="dias">Dias trabalhados:</label>
-                <input className={dias} type="number" />
+                <label htmlFor='dias'>Dias trabalhados:</label>
+                <input
+                  className={dias}
+                  id="daysWorked"
+                  type='number'
+                  onChange={formOnChangeHandler}
+                  value={calculatorForm.daysWorked}
+                />
               </div>
 
               <div className={inputArea}>
-                <label for="corridas">Corridas por dia:</label>
-                <input className={corridas} type="number" />
+                <label htmlFor='corridas'>Corridas por dia:</label>
+                <input
+                  className={corridas}
+                  id="dailyRuns"
+                  type='number'
+                  onChange={formOnChangeHandler}
+                  value={calculatorForm.dailyRuns}
+                />
               </div>
             </div>
 
             <div className={inputArea}>
-              <label for="consumo">Despesas diárias (R$):</label>
-              <input className={consumo} type="number" />
+              <label htmlFor='consumo'>Despesas diárias (R$):</label>
+              <input
+                className={consumo}
+                id="dailyExpenses"
+                type='number'
+                onChange={formOnChangeHandler}
+                value={calculatorForm.dailyExpenses}
+              />
             </div>
 
             <div className={inputArea}>
-              <label for="valorCorrida">Valor médio da corrida (R$):</label>
-              <input className={valorCorrida} type="number" />
+              <label htmlFor='valorCorrida'>Valor médio da corrida (R$):</label>
+              <input
+                className={valorCorrida}
+                id="avarageIncome"
+                type='number'
+                onChange={formOnChangeHandler}
+                value={calculatorForm.avarageIncome}
+              />
             </div>
           </div>
           <div className={results}>
@@ -175,15 +214,14 @@ function Calculator() {
           </div>
 
           <Modal
-            isOpen={isOpen}
+            isModalOpen={isModalOpen}
             onRequestClose={toggleModal}
-            contentLabel="My dialog"
-            style = {customStyles}
-          >
+            contentLabel='My dialog'
+            style={customStyles}>
             <div className={modalHeader}>
               <h3>Informações</h3>
               <div onClick={toggleModal} className={closeModal}>
-                <img src={modalIconClose} alt="close window" />
+                <img src={modalIconClose} alt='close window' />
               </div>
             </div>
             <div className={infoSection}>
